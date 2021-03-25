@@ -1,29 +1,31 @@
 package rs.ac.bg.fon.ai.MavenBiblioteka;
-import rs.ac.bg.fon.ai.MavenBiblioteka.Knjiga;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class KnjigaTest {
+class KnjigaTest {
+	
+	Knjiga k;
 
-	@Before
-	public void setUp() throws Exception {
-		Knjiga k = new Knjiga();
+	@BeforeEach
+	void setUp() throws Exception {
+		k = new Knjiga();
 	}
 
-	@After
-	public void tearDown() throws Exception {
+	@AfterEach
+	void tearDown() throws Exception {
 	}
 
 	@Test
-	public void testSetNaslov() {
-		Knjiga k = new Knjiga();
+	void testSetNaslov() {
+		k = new Knjiga();
 		k.setNaslov("Naslov1");
 		
 		assertEquals("Naslov1", k.getNaslov());
 	}
+
 
 }
